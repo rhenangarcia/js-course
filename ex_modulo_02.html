@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocketseat - Starter - Curso JavaScript - Exercícios módulo 02</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1>Rocketseat - Starter - Curso JavaScript - Exercícios módulo 02</h1>
+
+    <section>
+      <h2>Exercício 01</h2>
+      <button id="btn-ex01" class="block">Gerar quadrado</button>
+      <div id="div-ex01" class="flex"></div>
+    </section>
+    
+    <section>
+      <h2>Exercício 02</h2>
+      <h3>Passe o mouse sobre os quadrados acima!</h3>
+    </section>
+
+    <section id="section-ex03_04">
+      <h2>Exercícios 03 e 04</h2>
+      <div><ul class="inline-block"></ul></div>
+      <div class="flex">
+        <input type="text" name="nome" placeholder="Digite um nome ...">
+        <button onClick="addToUL(ulElement_ex03, inputElement_ex04)">Adicionar nome</button>
+      </div>
+    </section>
+
+    <script>
+      //Exercício 01
+      const buttonElement_ex01 = document.getElementById("btn-ex01");
+      
+      buttonElement_ex01.onclick = function ()
+      {
+        //Cria um quadrado vermelho
+        const redSquareElement = document.createElement("div");
+        redSquareElement.style.backgroundColor = "#F00";
+        redSquareElement.style.width = "100px";
+        redSquareElement.style.height = "100px";
+
+        //Adiciona evento p/ exercício 02
+        redSquareElement.onmouseover = function()
+        {
+          redSquareElement.style.backgroundColor = genRandomColor();
+        }
+
+        //Adiciona quadrado vermelho no #div-ex01
+        const divElement_ex01 = document.getElementById("div-ex01");
+        divElement_ex01.appendChild(redSquareElement);
+      }
+
+
+      //Exercício 02
+      function genRandomColor()
+      {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        
+        for (let i = 0; i < 6; i++)
+          color += letters[Math.floor(Math.random() * 16)];
+        
+        return color;
+      }
+
+
+      //Exercício 03
+      const ulElement_ex03 = document.querySelector("#section-ex03_04 ul");
+      
+      const nomes = ["Diego", "Gabriel", "Lucas"];
+      for (const nome of nomes)
+      {
+        //Cria item da lista "sem ordem" c/ texto "nome"
+        const liElement = document.createElement("li");
+        const liTextElement = document.createTextNode(nome);
+        liElement.appendChild(liTextElement);
+
+        //Adiciona item a lista
+        ulElement_ex03.appendChild(liElement);
+      }
+
+
+      //Exercício 04
+      const inputElement_ex04 = document.querySelector("input[name=nome]");
+
+      function addToUL(ulElement, inputElement)
+      {
+        if (inputElement.value)
+        {
+          //Cria item da lista "sem ordem" c/ texto da caixa input
+          const liElement = document.createElement("li");
+          const liTextElement = document.createTextNode(inputElement.value);
+          liElement.appendChild(liTextElement);
+
+          //Adiciona item a lista
+          ulElement.appendChild(liElement);
+
+          //Limpa a caixa input
+          inputElement.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

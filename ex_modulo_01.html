@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocketseat - Starter - Curso JavaScript - Exercícios módulo 01</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1>Rocketseat - Starter - Curso JavaScript - Exercícios módulo 01</h1>
+    <h2>Exercícios 01, 02, 03, 04 e 05</h2>
+    <h3>Abra o console!</h3>
+
+    <script>
+      //Exercício 01
+      const endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+      };
+
+      function imprimeDados01(dados)
+      {
+        let res = "O usuário mora em " + dados.cidade + " / " + dados.uf;
+        res += ", no bairro " + dados.bairro;
+        res += ", na rua " + dados.rua + " com nº " + dados.numero;
+
+        return res;
+      }
+
+      console.log("Exercício 01:\n" + imprimeDados01(endereco));
+
+
+      //Exercício 02
+      function encontraPares(x, y)
+      {
+        let res = [];
+
+        for(let i = x; i <= y; i++)
+          if (i % 2 == 0)
+            res.push(i);
+        
+        return res;
+      }
+
+      console.log("Exercício 02:\n" + encontraPares(2, 10).join(", "));
+
+
+      //Exercício 03
+      const skills = ["Javascript", "ReactJS", "React Native"];
+      
+      function temHabilidadeJS(habilidades)
+      {
+        return (habilidades.indexOf("Javascript") !== -1); 
+      }
+
+      console.log("Exercício 03:\n" + temHabilidadeJS(skills));
+
+
+      //Exercício 04
+      function nivelExperiencia(anosEstudo)
+      {
+        if (anosEstudo >= 0 && anosEstudo <= 1)
+          return "Iniciante";
+        else if (anosEstudo > 1 && anosEstudo <= 3)
+          return "Intermediário";
+        else if (anosEstudo > 3 && anosEstudo <= 6)
+          return "Avançado";
+        else if (anosEstudo > 6)
+          return "Jedi Master";
+      }
+
+      console.log("Exercício 04:\n" + nivelExperiencia(7));
+
+
+      //Exercício 05
+      const usuarios = 
+      [{
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }];
+
+      function imprimeDados05(dados)
+      {
+        let res = "";
+        
+        for (const dado of dados)
+        {
+          res += "O " + dado.nome + " possui as habilidades: " + dado.habilidades.join(", ") + "\n";
+        }
+                 
+        return res;
+      }
+
+      console.log("Exercício 05:\n" + imprimeDados05(usuarios));
+    </script>
+  </body>
+</html>
