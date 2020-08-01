@@ -1,4 +1,6 @@
-# 🚀 Welcome to js-course ![Starter Logo](imagens/starter-logo.svg) ![JS Logo](imagens/js-logo.png)
+![Starter Logo](imagens/starter-logo.svg) ![JS Logo](imagens/js-logo.png)
+
+# 🚀 Welcome to js-course
 
 These are the solutions to the exercises presented in **[Starter / JavaScript Course](https://rocketseat.com.br/starter)** by **[Rocketseat](https://rocketseat.com.br/)**.
 
@@ -10,8 +12,8 @@ To understand the solutions hosted on GitHub Pages, you need the corresponding P
 * **[Module 04](ex_modulo_04.pdf)**
 
 ## 🧾 Exercise solutions
-* **[Module 02](https://rhenangarcia.github.io/js-course/ex_modulo_02.html)**
 * **[Module 01](https://rhenangarcia.github.io/js-course/ex_modulo_01.html)**
+* **[Module 02](https://rhenangarcia.github.io/js-course/ex_modulo_02.html)**
 * **[Module 03](https://rhenangarcia.github.io/js-course/ex_modulo_03.html)**
 * **[Module 04](https://rhenangarcia.github.io/js-course/ex_modulo_04.html)**
 
